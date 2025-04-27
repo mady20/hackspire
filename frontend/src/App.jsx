@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import { TransactionsProvider } from './context/TransactionContext';
+import HeroSectionHomePage from './pages/heroSectionHomePage';
+import Footer from './pages/Footer';
+import Navbar from './pages/Navbar';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Features from './pages/Features';
+import SignupPage from './pages/Signup';
+import LoginPage from './pages/LoginPage';
+import Dashboard from './pages/Dashboard';
+import Creators from './pages/Creators';
+import CreatorProfile from './pages/CreatorProfile';
+import Pricing from './pages/Pricing';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <TransactionsProvider>
+      <div className="flex flex-col h-screen"> {/* Wrapper to handle flex layout */}
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<HeroSectionHomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/creator" element={<Creators />} />
+          <Route path="/creator/:id" element={<CreatorProfile />} />
+        </Routes>
+        {window.location.pathname !== '/dashboard' && window.location.pathname.indexOf('/creator/') !== 0 && <Footer />}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </TransactionsProvider>
+  );
 }
 
-export default App
+export default App;

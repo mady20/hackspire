@@ -1,0 +1,151 @@
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url('../../assets/fonts/Montserrat-Bold.ttf');
+}
+@font-face{
+    font-family: Montserrat-Light;
+    src: url('../../assets/fonts/Montserrat-Light.ttf');
+}
+*{
+    font-family: Montserrat-Light;
+}
+#navHead{
+  font-family: Montserrat-Bold;
+  background: linear-gradient(to right,  #f00, #f00, #222); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: #ef4444; /* red-500 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 50;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-logo {
+    font-family: Montserrat-Bold;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    font-family: Montserrat-Light;
+    display: none;
+  }
+  .navbar-links:hover{
+    text-decoration: none;
+  }
+  
+  .navbar-buttons {
+    display: none;
+  }
+  
+  .nav-link {
+    margin-right: 2.5rem;
+    font-size: 1.125rem; /* text-lg */
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: rgb(184, 3, 3);
+    font-weight: bold;
+    text-shadow: 0 0px 5px red;
+  }
+  
+  .nav-button {
+    padding: 0.5rem 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button {
+    background-color: rgb(188, 4, 4);
+    color: black;
+  }
+  
+  .login-button:hover {
+    transition: 0.4s;
+    box-shadow: 0 0 2px 2px rgb(176, 0, 0);
+  }
+  
+  .get-started-button {
+    background-color: rgb(188, 4, 4);
+    color: black;
+  }
+  
+  .get-started-button:hover {
+    transition: 0.4s;
+    box-shadow: 0 0 2px 2px rgb(176, 0, 0);
+  }
+  
+  .hamburger {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .hamburger-icon {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+  
+  .mobile-menu {
+    position: absolute;
+    top: 5rem; /* Top after navbar */
+    left: 0;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  
+  .mobile-link {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+  }
+  
+  .mobile-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .navbar-links {
+      display: flex;
+      align-items: center;
+    }
+  
+    .navbar-buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+    .mobile-menu {
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,110 @@
+.about-page {
+    background-color: #1e1b18; 
+    padding: 100px 20px;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeIn 1s ease-in;
+    min-height: 170vh;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 100px;
+    animation: slideDown 1s ease-out;
+  }
+
+  .about-header h1 {
+    font-size: 36px;
+    background: linear-gradient(90deg, #000000, #ff0000); /* black to red */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: popIn 1s ease forwards;
+  }
+  
+  .about-header p {
+    font-size: 18px;
+    color: #ffffff; /* white text */
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  .about-content {
+    flex: 1;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .about-section {
+    background: #111111;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.15); /* subtle initial shadow */
+    transform: translateY(0);
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-delay: 0.3s;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .about-section:hover {
+    transform: translateY(-8px) scale(1.02); /* slight lift and scale */
+    box-shadow: 0 12px 24px rgba(255, 0, 0, 0.35), 
+                0 0 20px rgba(255, 0, 0, 0.2); /* soft glow effect */
+  }
+  
+  .about-section h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #f00, #f00, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .about-section p,
+  .about-section ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ffffff; 
+  }
+  
+  .about-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #cccccc; 
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes popIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  
