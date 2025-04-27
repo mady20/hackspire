@@ -1,0 +1,59 @@
+html{
+    overflow-x:hidden;
+}
+@font-face{
+    font-family: Montserrat-Bold;
+    src: url('../../assets/fonts/Montserrat-Bold.ttf');
+}
+@font-face{
+    font-family: Montserrat-Light;
+    src: url('../../assets/fonts/Montserrat-Light.ttf');
+}
+
+#heading{
+    font-size: 8vw;
+    font-family: Montserrat-Bold;
+}
+#btn2{
+    margin: 10px;
+    padding: 15px 10px;
+    color: red;
+    border: none;
+    font-weight: bold;
+    background-color: white;
+    box-shadow: 0 0 2px 2px white;
+    border-radius: 10px;
+    width: 200px;
+}
+#btn2:hover{
+    transition: 0.4s;
+    color: white;
+    background: rgb(183, 1, 1);
+    color: black;
+    box-shadow: 0 0 2px 2px red;
+}
+
+#btn, #subhead{
+    font-family: Montserrat-Light;
+    color: white;
+    margin: 10px;
+}
+
+#btn{
+    padding: 15px 10px;
+    color: red;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(183, 1, 1);
+    box-shadow: 0 0 2px 2px red;
+    color: black;
+    border-radius: 10px;
+    width: 200px;
+}
+
+#btn:hover{
+    transition: 0.4s;
+    color: red;
+    background: black;
+    box-shadow: 0 0 2px 2px rgb(50, 49, 49);
+}
